@@ -1,0 +1,22 @@
+apiVersion: kuadrant.io/v1
+kind: DNSPolicy
+metadata:
+  name: dnspolicy-sample
+  namespace: test
+spec:
+  targetRef:
+    name: test
+    group: gateway.networking.k8s.io
+    kind: Gateway
+  providerRefs:
+    - name: inmemory-credentials
+  loadBalancing:
+    geo: IE
+    weight: 120
+    defaultGeo: true
+  healthCheck:
+    port: 80
+    path: "/health"
+    protocol: "HTTP"
+    interval: 1s
+    failureThreshold: 5

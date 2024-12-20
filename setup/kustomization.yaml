@@ -1,0 +1,14 @@
+resources:
+  - namespace.yaml
+  - gateway.yaml
+  - ./dnspolicy
+  - ./workload
+
+secretGenerator:
+  - name: inmemory-credentials
+    namespace: test
+    type: "kuadrant.io/inmemory"
+    literals:
+      - INMEM_INIT_ZONES=apps.demos.kuadrant.io
+    options:
+      disableNameSuffixHash: true
