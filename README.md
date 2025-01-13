@@ -2,11 +2,11 @@
 It was decided that at the moment such test suite is not needed. 
 
 
-# e2e-testsuite
+## e2e-testsuite
 POC of text-driven test suite.
 Uses [Cucumber](https://cucumber.io/docs/cucumber/) and it's implementation in GO - [Godog](https://github.com/cucumber/godog)
 
-## Why
+### Why
 This allows for, hopefully, any person to understand what is being tested and what cases we have. 
 This is a Proof Of a Concept of a test approach and not a design of the suite. So, please, ignore for a moment decisions like "how do we deploy workload" and "we don't change resources amid the test"
 
@@ -17,7 +17,7 @@ The implementation is in the `tests/dnspolicy/*.go`
 Note that the declaration is language agnostic and can be written in other languages
 (such a python) even within the same test suite. 
 
-## How
+### How
 This suite expects you to have already kuadrant running. 
 Refer to the [kuadrant-operator](https://github.com/Kuadrant/kuadrant-operator) on how to install. 
 It uses Kustomize to deploy an initial set of resources on the cluster.
