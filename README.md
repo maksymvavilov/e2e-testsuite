@@ -1,3 +1,7 @@
+# Inactive 
+It was decided that at the moment such test suite is not needed. 
+
+
 # e2e-testsuite
 POC of text-driven test suite.
 Uses [Cucumber](https://cucumber.io/docs/cucumber/) and it's implementation in GO - [Godog](https://github.com/cucumber/godog)
